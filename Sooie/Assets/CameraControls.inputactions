@@ -1,0 +1,55 @@
+{
+    "name": "CameraControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "c95879b3-8c22-43ed-b5f0-3eda7f34a296",
+            "actions": [
+                {
+                    "name": "Switch Cameras",
+                    "type": "Button",
+                    "id": "9c598fa6-47df-46b2-9692-2fdd0fc5cfdf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e1d1b7ca-e01e-443d-a5c4-1de058e82f96",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Cameras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8772f248-dd74-44fb-b4e9-00130b3eb204",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Cameras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce8c2612-ca27-4d31-b194-209694892f61",
+                    "path": "<XInputController>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Cameras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
