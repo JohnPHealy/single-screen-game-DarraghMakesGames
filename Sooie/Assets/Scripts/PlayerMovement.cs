@@ -45,11 +45,17 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         //print(context.ReadValue<float>());
-        if (canJump)
+        if (canJump && context.started)
         {
             playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             //canJump = false;
         }
+
+        if (context.canceled && playerRB.velocity.y > 0)
+        {
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 0f);
+        }
+
     }
 
 }

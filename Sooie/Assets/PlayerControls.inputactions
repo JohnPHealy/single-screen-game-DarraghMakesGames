@@ -35,6 +35,28 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "c5e89590-e476-461b-94f0-a0a965aff91e",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ae8adea-b4c5-4a64-aee1-82e71e273be3",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "AD Movement",
                     "id": "b4e81476-b783-487a-a9b2-5136cfa701ec",
                     "path": "1DAxis",
@@ -93,6 +115,39 @@
                     "name": "positive",
                     "id": "5ee3e278-42dd-43aa-b541-e25af9ecfaff",
                     "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Controller Movement",
+                    "id": "08be0eb9-b4ee-4387-811d-5542c10dd89b",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "ca2fee8e-5ec2-4308-9a2b-5dc0a7f0608e",
+                    "path": "<XInputController>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "d2e7ace8-0d04-4d4f-967a-c13578ee2b21",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
