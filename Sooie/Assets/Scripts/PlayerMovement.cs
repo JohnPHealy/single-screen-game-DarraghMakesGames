@@ -8,14 +8,23 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveForce, maxSpeed, jumpForce;
     [SerializeField] private Collider2D groundCheck;
     [SerializeField] private LayerMask groundLayers;
+    [SerializeField] private GameObject playerAnimator;
+    [SerializeField] private float moveSpeed;
     private float moveDirection;
     private Rigidbody2D playerRB;
     private bool canJump;
+    private Animator anim;
+    
 
     private void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
+        
+
+
     }
+
 
     private void FixedUpdate()
     {
@@ -33,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
         }
+
+
 
     }
 
@@ -57,5 +68,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+    private void Update()
+    {
+        if(moveDirection < 0)
+        {
+            playerAnimator.transform.localScale = new Vector3(-1, playerAnimator.transform.localScale.y, playerAnimator.transform.localScale.z);
+        }
+        if (moveDirection > 0)
+        {
+            playerAnimator.transform.localScale = new Vector3(1, playerAnimator.transform.localScale.y, playerAnimator.transform.localScale.z);
+        }
+
+        moveSpeed = Mathf.Abs(playerRB.velocity.x);
+        anim.SetFloat("MoveSpeed", moveSpeed);
+
+    }
+
+
 
 }
