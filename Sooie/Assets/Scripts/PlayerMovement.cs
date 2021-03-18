@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump;
     private Animator anim;
     private float enemyHitForce = 20f;
+    private int playerHealth = 3;
     
 
     private void Start()
@@ -115,6 +117,21 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = Mathf.Abs(playerRB.velocity.x);
         anim.SetFloat("MoveSpeed", moveSpeed);
 
+
+        //Player death
+        if (playerHealth < 1)
+        {
+            SceneManager.LoadScene("CastleExterior");
+        }
+
+    }
+
+    //Player damage
+
+    public void PlayerDamage()
+
+    {
+        playerHealth--;        
     }
 
 
