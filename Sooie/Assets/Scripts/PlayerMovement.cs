@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRB;
     private bool canJump;
     private Animator anim;
+    private float enemyHitForce = 20f;
     
 
     private void Start()
@@ -64,6 +65,18 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+    }
+
+    //If hit by enemy
+
+    public void HitLeft()
+    {
+        playerRB.AddForce(transform.right * -enemyHitForce, ForceMode2D.Impulse);
+    }
+
+    public void HitRight()
+    {
+        playerRB.AddForce(transform.right * enemyHitForce, ForceMode2D.Impulse);
     }
 
     public void Move(InputAction.CallbackContext context)
