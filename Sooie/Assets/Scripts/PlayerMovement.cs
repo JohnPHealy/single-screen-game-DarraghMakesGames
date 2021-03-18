@@ -94,12 +94,6 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = context.ReadValue<float>();
     }
 
-    public void Move(float moveAmount)
-    {
-        //print(context.ReadValue<float>());
-        moveDirection = moveAmount;
-    }
-
     public void Jump(InputAction.CallbackContext context)
     {
         //print(context.ReadValue<float>());
