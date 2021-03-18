@@ -7,9 +7,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveForce, maxSpeed, jumpForce;
     [SerializeField] private Collider2D groundCheck;
-    [SerializeField] private LayerMask groundLayers;
+    [SerializeField] private LayerMask groundLayers, platformLayers1, platformLayers2, platformLayers3;
     [SerializeField] private GameObject playerAnimator;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private GameObject platform1, platform2, platform3;
     private float moveDirection;
     private Rigidbody2D playerRB;
     private bool canJump;
@@ -43,6 +44,24 @@ public class PlayerMovement : MonoBehaviour
             canJump = false;
         }
 
+        //Platform movement fix
+
+        if (groundCheck.IsTouchingLayers(platformLayers1))
+        {
+            transform.parent = platform1.transform;
+        }
+        else if (groundCheck.IsTouchingLayers(platformLayers2))
+        {
+            transform.parent = platform2.transform;
+        }
+        else if (groundCheck.IsTouchingLayers(platformLayers3))
+        {
+            transform.parent = platform3.transform;
+        }
+        else
+        {
+            transform.parent = null;
+        }
 
 
     }
