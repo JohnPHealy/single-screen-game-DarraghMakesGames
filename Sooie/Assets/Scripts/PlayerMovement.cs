@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRB;
     private bool canJump;
     private Animator anim;
-    private float enemyHitForce = 20f;
+    private float enemyHitForce = 10f;
     private int playerHealth = 3;
     
 
@@ -81,6 +81,13 @@ public class PlayerMovement : MonoBehaviour
         playerRB.AddForce(transform.right * enemyHitForce, ForceMode2D.Impulse);
     }
 
+    public void EnemyBounce()
+    {
+        playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
+
+    //End hit by enemy
+
     public void Move(InputAction.CallbackContext context)
     {
         //print(context.ReadValue<float>());
@@ -102,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+
 
     private void Update()
     {
